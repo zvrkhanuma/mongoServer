@@ -21,7 +21,7 @@ const list = (req, res) => {
 
 const read = (req, res) => {
     const id = req.params.id;
-    Student.findById(id).exec((err, data) => {
+    Course.findById(id).exec((err, data) => {
         if(err){
             return res.status(400).json(err.message);
         }
